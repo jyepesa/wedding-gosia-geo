@@ -4,13 +4,14 @@ export const de = {
     title: "Hochzeit Gosia und Geo",
   },
   heading: {
-    title: "Hochzeitszeitung",
+    title: "Hochzeits<wbr />zeitung",
     "date-city": {
       date: "26 juni 2026",
       city: "Warschau",
     },
     type: "Unsere große polnisch-griechische Hochzeit",
-    announcement: "Małgorzata & Georgios <span>heiraten!</span>",
+    announcement:
+      "Małgorzata & Georgios <span class='opening__marry'>heiraten!</span>",
   },
   invitation: {
     title: "Liebe Familie und Freunde,",

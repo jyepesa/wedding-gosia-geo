@@ -1,11 +1,32 @@
 ---
 //Deutsch
-import Layout from "../../layouts/Layout.astro"
-import { de } from "../../i18n/de"
+import Layout from "../../layouts/Layout.astro";
+import { de } from "../../i18n/de";
 
-const title = de.meta.title
+const title = de.meta.title;
 ---
-<Layout title={ title } language="de">
-    
-    
+
+<Layout title={title} language="de">
+  <div class="page">
+    <main>
+      <section class="opening">
+        <h1 class="opening__title" set:html={de.heading.title} />
+        <div class="opening__time-date">
+          <p>{de.heading["date-city"].city}</p>
+          <p>{de.heading["date-city"].date}</p>
+        </div>
+        <p class="opening__wedding-type">{de.heading.type}</p>
+        <h2 class="opening__announcement" set:html={de.heading.announcement} />
+        <img src="/guinea-pigs.jpg" alt="" />
+      </section>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31863.7103417938!2d20.901839591613616!3d52.10417369509804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471931a459c1aa57%3A0xb3a863a664a6e56f!2sGo%C5%9Bciniec%20Oycowizna!5e0!3m2!1ses-419!2sde!4v1761865824183!5m2!1ses-419!2sde"
+        class="map"
+        title="location-map"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </main>
+  </div>
 </Layout>

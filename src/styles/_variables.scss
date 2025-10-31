@@ -1,1 +1,8 @@
-$primary-color: rgb(252, 215, 215);
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Quintessential&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
+$primary-color: rgb(252, 242, 215);
+$title-font: "Bodoni Moda SC", serif;
+$special-font: "Quintessential", serif;
+$cute-font: "Courgette", cursive;
