@@ -24,21 +24,25 @@ const urls = languagesToRender.map((lang) => `/${repo}/${lang[0]}/`);
 </nav>
 <style lang="scss">
   .navbar {
-    color: black;
     font-family: sans-serif;
     max-width: 800px;
     margin: 0 auto;
     position: relative;
     display: flex;
-    top: 0;
     justify-content: flex-end;
     font-size: 1.3rem;
     font-weight: 200;
     &__button {
+      color: black;
       position: relative;
       right: 1rem;
       text-decoration: none;
       text-transform: uppercase;
+      border: 1px solid black;
+      border-radius: 4px;
+      padding: 0.25rem 0.5rem;
+      box-shadow: 0 2px 3px rgb(51, 51, 49);
+      background-color: rgb(233, 219, 181);
     }
     @media screen and (min-width: 800px) {
       font-size: 1.7rem;

@@ -29,8 +29,8 @@ export const pl = {
     telephones: [
       "Gosia: +48 693 936 377",
       "Georgios: +30 698 011 3031",
-      "Joanna - Trauzeugin: +48 695 183 802",
-      "Juan - Trauzeuge: +49 176 4322 6018",
+      "Joanna - Swiadkowa: +48 695 183 802",
+      "Juan - Swiadek: +49 176 4322 6018",
     ],
   },
   confirmation:
