@@ -4,10 +4,11 @@ const languages = [
   ["de", "🇩🇪"],
 ];
 const pathname = Astro.url.pathname;
+const repo = "wedding-gosia-geo";
 const languagesToRender = languages.filter(
   (lang) => !pathname.includes(`/${lang[0]}/`)
 );
-const urls = languagesToRender.map((lang) => `/${lang[0]}/`);
+const urls = languagesToRender.map((lang) => `/${repo}/${lang[0]}/`);
 ---
 
 <nav class="navbar">
@@ -23,6 +24,7 @@ const urls = languagesToRender.map((lang) => `/${lang[0]}/`);
 </nav>
 <style lang="scss">
   .navbar {
+    color: black;
     font-family: sans-serif;
     max-width: 800px;
     margin: 0 auto;

@@ -35,7 +35,7 @@ export const de = {
     ],
   },
   confirmation:
-    "<strong>Wir bitten herzlich um Ihre Zusage</strong> bis spätestens <strong>01.04.2026</strong>, idealerweise per Nachricht an die Trauzeugen oder direkt an uns.",
+    "<strong>Wir bitten herzlich um eure Zusage</strong> bis spätestens <strong>01.04.2026</strong>, idealerweise per Nachricht an die Trauzeugen oder direkt an uns.",
   accomodation:
     "<u>Wegen der Unterkunft</u> - bitte gebt unseren Trauzeugen (Joanna & Juan) Bescheid, wer von Euch eine Übernachtung benötigt, damit wir dies an die entsprechenden Personen weitergeben können. Die Übernachtung kostet ca. 35-40 € pro Person.",
   presents:

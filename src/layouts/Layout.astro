@@ -1,21 +1,25 @@
 ---
-const { title, language } = Astro.props
+const { title, language } = Astro.props;
 ---
 
 <!doctype html>
 <html lang={language}>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/wedding-gosia-geo/favicon.svg"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style lang="scss" is:global>
-@import url(../styles/styles.scss);
+  @import url(../styles/styles.scss);
 </style>
