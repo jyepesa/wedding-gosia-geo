@@ -1,12 +1,83 @@
 ---
 //Polski
 import Layout from "../../layouts/Layout.astro";
-import {pl} from "../../i18n/pl"
+import { pl } from "../../i18n/pl";
 
-const title = pl.meta.title
+const title = pl.meta.title;
 ---
-<Layout title={ title } language="pl">
-    
 
-    
+<Layout title={title} language="pl">
+  <div class="page">
+    <main>
+      <section class="opening">
+        <h1 class="opening__title">{pl.heading.title}</h1>
+        <div class="opening__time-date">
+          <p>{pl.heading["date-city"].city}</p>
+          <p>{pl.heading["date-city"].date}</p>
+        </div>
+        <p class="opening__wedding-type">{pl.heading.type}</p>
+        <h2 class="opening__announcement" set:html={pl.heading.announcement} />
+        <img src="/guinea-pigs.jpg" alt="" />
+      </section>
+      <section>
+        <div class="invitation">
+          <h2 class="invitation__title">{pl.invitation.title}</h2>
+          <p class="invitation__message" set:html={pl.invitation.message} />
+        </div>
+        <div class="time-important">
+          <div class="timetable">
+            <h2 class="timetable__title">{pl.timetable.title}</h2>
+            <p class="timetable__text" set:html={pl.timetable.first} />
+            <p class="timetable__text" set:html={pl.timetable.second} />
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31863.7103417938!2d20.901839591613616!3d52.10417369509804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471931a459c1aa57%3A0xb3a863a664a6e56f!2sGo%C5%9Bciniec%20Oycowizna!5e0!3m2!1ses-419!2sde!4v1761865824183!5m2!1ses-419!2sde"
+              class="map"
+              title="location-map"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="importants">
+            <h2 class="importants__title">{pl.important.title}</h2>
+            <ul class="importants__phones">
+              {
+                pl.important.telephones.map((num) => {
+                  return <li class="importants__phone">{num}</li>;
+                })
+              }
+            </ul>
+            <a
+              href="https://oycowizna.pl/en/"
+              class="venue-link"
+              target="_blank"
+            >
+              <img
+                class="venue-link__img"
+                src="/gosciniec-logo.jpg"
+                alt="Unsere Veranstaltungsort"
+              />
+              <p>Nasza lokalizacja!</p>
+            </a>
+          </div>
+        </div>
+        <div class="details">
+          <p set:html={pl.confirmation} />
+          <div class="details__presents">
+            <p set:html={pl.presents} />
+            <div class="details__icons">
+              <img src="/icon-1.png" alt="no flowers" /><img
+                src="/icon-2.png"
+                alt="no gifts"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="story">
+          <h2 class="story__heading" set:html={pl.story.title} />
+          <p class="story__text" set:html={pl.story.text} />
+        </div>
+      </section>
+    </main>
+  </div>
 </Layout>

@@ -10,7 +10,7 @@ const title = de.meta.title;
   <div class="page">
     <main>
       <section class="opening">
-        <h1 class="opening__title" set:html={de.heading.title} />
+        <h1 class="opening__title">{de.heading.title}</h1>
         <div class="opening__time-date">
           <p>{de.heading["date-city"].city}</p>
           <p>{de.heading["date-city"].date}</p>
@@ -19,14 +19,66 @@ const title = de.meta.title;
         <h2 class="opening__announcement" set:html={de.heading.announcement} />
         <img src="/guinea-pigs.jpg" alt="" />
       </section>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31863.7103417938!2d20.901839591613616!3d52.10417369509804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471931a459c1aa57%3A0xb3a863a664a6e56f!2sGo%C5%9Bciniec%20Oycowizna!5e0!3m2!1ses-419!2sde!4v1761865824183!5m2!1ses-419!2sde"
-        class="map"
-        title="location-map"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <section>
+        <div class="invitation">
+          <h2 class="invitation__title">{de.invitation.title}</h2>
+          <p class="invitation__message" set:html={de.invitation.message} />
+        </div>
+        <div class="time-important">
+          <div class="timetable">
+            <h2 class="timetable__title">{de.timetable.title}</h2>
+            <p class="timetable__text" set:html={de.timetable.first} />
+            <p class="timetable__text" set:html={de.timetable.second} />
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31863.7103417938!2d20.901839591613616!3d52.10417369509804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471931a459c1aa57%3A0xb3a863a664a6e56f!2sGo%C5%9Bciniec%20Oycowizna!5e0!3m2!1ses-419!2sde!4v1761865824183!5m2!1ses-419!2sde"
+              class="map"
+              title="location-map"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="importants">
+            <h2 class="importants__title">{de.important.title}</h2>
+            <ul class="importants__phones">
+              {
+                de.important.telephones.map((num) => {
+                  return <li class="importants__phone">{num}</li>;
+                })
+              }
+            </ul>
+            <a
+              href="https://oycowizna.pl/en/"
+              class="venue-link"
+              target="_blank"
+            >
+              <img
+                class="venue-link__img"
+                src="/gosciniec-logo.jpg"
+                alt="Unsere Veranstaltungsort"
+              />
+              <p>Unsere Veranstaltungsort!</p>
+            </a>
+          </div>
+        </div>
+        <div class="details">
+          <p set:html={de.confirmation} />
+          <p set:html={de.accomodation} />
+          <div class="details__presents">
+            <p>{de.presents}</p>
+            <div class="details__icons">
+              <img src="/icon-1.png" alt="no flowers" /><img
+                src="/icon-2.png"
+                alt="no gifts"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="story">
+          <h2 class="story__heading" set:html={de.story.title} />
+          <p class="story__text" set:html={de.story.text} />
+        </div>
+      </section>
     </main>
   </div>
 </Layout>
