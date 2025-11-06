@@ -1,0 +1,45 @@
+---
+const languages = [
+  ["pl", "🇵🇱"],
+  ["de", "🇩🇪"],
+];
+const pathname = Astro.url.pathname;
+const languagesToRender = languages.filter(
+  (lang) => !pathname.includes(`/${lang[0]}/`)
+);
+const urls = languagesToRender.map((lang) => `/${lang[0]}/`);
+---
+
+<nav class="navbar">
+  {
+    urls.map((lang, i) => {
+      return (
+        <a class="navbar__button" href={lang}>
+          {languagesToRender[i].join(" ")}
+        </a>
+      );
+    })
+  }
+</nav>
+<style lang="scss">
+  .navbar {
+    font-family: sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    top: 0;
+    justify-content: flex-end;
+    font-size: 1.3rem;
+    font-weight: 200;
+    &__button {
+      position: relative;
+      right: 1rem;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    @media screen and (min-width: 800px) {
+      font-size: 1.7rem;
+    }
+  }
+</style>

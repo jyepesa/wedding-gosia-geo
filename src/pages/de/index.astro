@@ -2,6 +2,7 @@
 //Deutsch
 import Layout from "../../layouts/Layout.astro";
 import { de } from "../../i18n/de";
+import LangButton from "../../components/lang-button.astro";
 
 const title = de.meta.title;
 ---
@@ -9,6 +10,7 @@ const title = de.meta.title;
 <Layout title={title} language="de">
   <div class="page">
     <main>
+      <LangButton />
       <section class="opening">
         <h1 class="opening__title">{de.heading.title}</h1>
         <div class="opening__time-date">

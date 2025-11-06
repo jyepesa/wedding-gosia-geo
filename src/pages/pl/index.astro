@@ -2,6 +2,9 @@
 //Polski
 import Layout from "../../layouts/Layout.astro";
 import { pl } from "../../i18n/pl";
+import LangButton from "../../components/lang-button.astro";
+
+console.log(Astro.url.pathname);
 
 const title = pl.meta.title;
 ---
@@ -9,6 +12,7 @@ const title = pl.meta.title;
 <Layout title={title} language="pl">
   <div class="page">
     <main>
+      <LangButton />
       <section class="opening">
         <h1 class="opening__title">{pl.heading.title}</h1>
         <div class="opening__time-date">
@@ -47,11 +51,7 @@ const title = pl.meta.title;
                 })
               }
             </ul>
-            <a
-              href="https://oycowizna.pl/en/"
-              class="venue-link"
-              target="_blank"
-            >
+            <a href="https://oycowizna.pl/" class="venue-link" target="_blank">
               <img
                 class="venue-link__img"
                 src="/gosciniec-logo.jpg"
