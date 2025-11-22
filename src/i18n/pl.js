@@ -15,26 +15,27 @@ export const pl = {
   invitation: {
     title: "Droga Rodzino i Przyjaciele,",
     message:
-      "Z radością chcielibyśmy Was zaprosić na uroczystość zaślubin i wesele, <span>w dniu <strong>26.06.2026.</strong></span>W tym wyjątkowym dniu będziemy zaszczyceni, jeśli obdarzycie nas swojąobecnością.",
+      "Z radością chcielibyśmy Was zaprosić na uroczystość zaślubin i wesele, <span>w dniu <strong>26.06.2026.</strong></span><br><br>W tym wyjątkowym dniu będziemy zaszczyceni, jeśli obdarzycie nas swoją obecnością.",
   },
   timetable: {
     title: "Harmonogram dnia",
     first:
-      "<span class='timetable__time'>15:30</span> - ceremonia zaslubin w ogrodzie Goscinca „Oycowizna“,<br>powitalny szampan i zdjecia",
+      "<span class='timetable__time'>15:30</span> - ceremonia zaślubin w ogrodzie Gościńca „Oycowizna”;<br>powitalny szampan i zdjęcia",
     second:
-      "<span class='timetable__time'>17:00</span> - uroczysty obiad weselny i rozpoczecie zabawy w Goscincu „Oycowizna“",
+      "<span class='timetable__time'>17:00</span> - uroczysty obiad weselny i rozpoczęcie zabawy w Gościńcu „Oycowizna”",
   },
   important: {
     title: "Warto ich znac",
     telephones: [
       "Gosia: +48 693 936 377",
       "Georgios: +30 698 011 3031",
-      "Joanna - Swiadkowa: +48 695 183 802",
-      "Juan - Swiadek: +49 176 4322 6018",
+      "Joanna - Świadkowa: +48 695 183 802",
+      "Juan - Świadek: +49 176 4322 6018",
     ],
   },
   confirmation:
-    "<strong>Bardzo prosimy o potwierdzenie przybycia</strong> do dnia <strong>01.04.2026</strong>, najlepiej wiadomością do świadków lub bezpośrednio do nas.",
+    "<strong>Bardzo prosimy o potwierdzenie przybycia</strong> do dnia <strong>01.04.2026</strong>, najlepiej wiadomością do Świadków lub bezpośrednio do nas.",
+  food: "Jeśli ktoś z Was potrzebuje posiłku <strong>wegetariańskiego</strong>, prosimy o przekazanie tej informacji Świadkom przy potwierdzeniu obecności.",
   presents:
     "<strong>Wasza obecność to dla nas najpiękniejszy prezent!</strong> Jeślibyscie chcieli nas obdarować:",
   story: {

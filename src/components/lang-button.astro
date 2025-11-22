@@ -2,6 +2,7 @@
 const languages = [
   ["pl", "🇵🇱"],
   ["de", "🇩🇪"],
+  ["gr", "🇬🇷"],
 ];
 const pathname = Astro.url.pathname;
 const repo = "wedding-gosia-geo";
@@ -29,6 +30,7 @@ const urls = languagesToRender.map((lang) => `/${repo}/${lang[0]}/`);
     margin: 0 auto;
     position: relative;
     display: flex;
+    gap: 5px;
     justify-content: flex-end;
     font-size: 1.3rem;
     font-weight: 200;

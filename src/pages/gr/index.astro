@@ -1,36 +1,36 @@
 ---
-//Polski
+//DGreek
 import Layout from "../../layouts/Layout.astro";
-import { pl } from "../../i18n/pl";
+import { gr } from "../../i18n/gr";
 import LangButton from "../../components/lang-button.astro";
 
-const title = pl.meta.title;
+const title = gr.meta.title;
 ---
 
-<Layout title={title} language="pl">
+<Layout title={title} language="gr">
   <div class="page">
     <main>
       <LangButton />
       <section class="opening">
-        <h1 class="opening__title">{pl.heading.title}</h1>
+        <h1 class="opening__title">{gr.heading.title}</h1>
         <div class="opening__time-date">
-          <p>{pl.heading["date-city"].city}</p>
-          <p>{pl.heading["date-city"].date}</p>
+          <p>{gr.heading["date-city"].city}</p>
+          <p>{gr.heading["date-city"].date}</p>
         </div>
-        <p class="opening__wedding-type">{pl.heading.type}</p>
-        <h2 class="opening__announcement" set:html={pl.heading.announcement} />
+        <p class="opening__wedding-type">{gr.heading.type}</p>
+        <h2 class="opening__announcement" set:html={gr.heading.announcement} />
         <img src="/wedding-gosia-geo/guinea-pigs.jpg" alt="" />
       </section>
       <section>
         <div class="invitation">
-          <h2 class="invitation__title">{pl.invitation.title}</h2>
-          <p class="invitation__message" set:html={pl.invitation.message} />
+          <h2 class="invitation__title">{gr.invitation.title}</h2>
+          <p class="invitation__message" set:html={gr.invitation.message} />
         </div>
         <div class="time-important">
           <div class="timetable">
-            <h2 class="timetable__title">{pl.timetable.title}</h2>
-            <p class="timetable__text" set:html={pl.timetable.first} />
-            <p class="timetable__text" set:html={pl.timetable.second} />
+            <h2 class="timetable__title">{gr.timetable.title}</h2>
+            <p class="timetable__text" set:html={gr.timetable.first} />
+            <p class="timetable__text" set:html={gr.timetable.second} />
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31863.7103417938!2d20.901839591613616!3d52.10417369509804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471931a459c1aa57%3A0xb3a863a664a6e56f!2sGo%C5%9Bciniec%20Oycowizna!5e0!3m2!1ses-419!2sde!4v1761865824183!5m2!1ses-419!2sde"
               class="map"
@@ -41,29 +41,34 @@ const title = pl.meta.title;
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="importants">
-            <h2 class="importants__title">{pl.important.title}</h2>
+            <h2 class="importants__title">{gr.important.title}</h2>
             <ul class="importants__phones">
               {
-                pl.important.telephones.map((num) => {
+                gr.important.telephones.map((num) => {
                   return <li class="importants__phone">{num}</li>;
                 })
               }
             </ul>
-            <a href="https://oycowizna.pl/" class="venue-link" target="_blank">
+            <a
+              href="https://oycowizna.pl/en/"
+              class="venue-link"
+              target="_blank"
+            >
               <img
                 class="venue-link__img"
                 src="/wedding-gosia-geo/gosciniec-logo.jpg"
                 alt="Unsere Veranstaltungsort"
               />
-              <p>Nasza lokalizacja!</p>
+              <p>ο χώρος μας!</p>
             </a>
           </div>
         </div>
         <div class="details">
-          <p set:html={pl.confirmation} />
-          <p set:html={pl.food} />
+          <p set:html={gr.confirmation} />
+          <p set:html={gr.accomodation} />
+          <p set:html={gr.food} />
           <div class="details__presents">
-            <p set:html={pl.presents} />
+            <p>{gr.presents}</p>
             <div class="details__icons">
               <img src="/wedding-gosia-geo/icon-1.png" alt="no flowers" /><img
                 src="/wedding-gosia-geo/icon-2.png"
@@ -73,10 +78,23 @@ const title = pl.meta.title;
           </div>
         </div>
         <div class="story">
-          <h2 class="story__heading" set:html={pl.story.title} />
-          <p class="story__text" set:html={pl.story.text} />
+          <h2 class="story__heading" set:html={gr.story.title} />
+          <p class="story__text" set:html={gr.story.text} />
         </div>
       </section>
     </main>
   </div>
 </Layout>
+<style lang="scss">
+  .opening {
+    @media screen and (min-width: 800px) {
+      &__title {
+        font-size: 3.7rem;
+      }
+    }
+  }
+  .timetable__text,
+  .importants__phone {
+    font-size: 1.3rem;
+  }
+</style>
