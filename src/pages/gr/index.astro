@@ -26,11 +26,16 @@ const title = gr.meta.title;
           <h2 class="invitation__title">{gr.invitation.title}</h2>
           <p class="invitation__message" set:html={gr.invitation.message} />
         </div>
-        <div class="time-important">
-          <div class="timetable">
-            <h2 class="timetable__title">{gr.timetable.title}</h2>
-            <p class="timetable__text" set:html={gr.timetable.first} />
-            <p class="timetable__text" set:html={gr.timetable.second} />
+        <div class="location">
+          <h2 class="location__title">ο χώρος μας!</h2>
+          <div class="location__container">
+            <a href="https://oycowizna.pl/" class="venue-link" target="_blank">
+              <img
+                class="venue-link__img"
+                src="/wedding-gosia-geo/gosciniec-logo.jpg"
+                alt="Unsere Veranstaltungsort"
+              />
+            </a>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31863.7103417938!2d20.901839591613616!3d52.10417369509804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471931a459c1aa57%3A0xb3a863a664a6e56f!2sGo%C5%9Bciniec%20Oycowizna!5e0!3m2!1ses-419!2sde!4v1761865824183!5m2!1ses-419!2sde"
               class="map"
@@ -39,6 +44,13 @@ const title = gr.meta.title;
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="time-important">
+          <div class="timetable">
+            <h2 class="timetable__title">{gr.timetable.title}</h2>
+            <p class="timetable__text" set:html={gr.timetable.first} />
+            <p class="timetable__text" set:html={gr.timetable.second} />
           </div>
           <div class="importants">
             <h2 class="importants__title">{gr.important.title}</h2>
@@ -49,18 +61,6 @@ const title = gr.meta.title;
                 })
               }
             </ul>
-            <a
-              href="https://oycowizna.pl/en/"
-              class="venue-link"
-              target="_blank"
-            >
-              <img
-                class="venue-link__img"
-                src="/wedding-gosia-geo/gosciniec-logo.jpg"
-                alt="Unsere Veranstaltungsort"
-              />
-              <p>ο χώρος μας!</p>
-            </a>
           </div>
         </div>
         <div class="details">
