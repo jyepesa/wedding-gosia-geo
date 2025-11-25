@@ -25,7 +25,7 @@ export const pl = {
       "<span class='timetable__time'>17:00</span> - uroczysty obiad weselny i rozpoczęcie zabawy w Gościńcu „Oycowizna”",
   },
   important: {
-    title: "Warto ich znac",
+    title: "Warto ich znać",
     telephones: [
       "Gosia: +48 693 936 377",
       "Georgios: +30 698 011 3031",

@@ -26,6 +26,23 @@ const title = pl.meta.title;
           <h2 class="invitation__title">{pl.invitation.title}</h2>
           <p class="invitation__message" set:html={pl.invitation.message} />
         </div>
+        <div class="time-important">
+          <div class="timetable">
+            <h2 class="timetable__title">{pl.timetable.title}</h2>
+            <p class="timetable__text" set:html={pl.timetable.first} />
+            <p class="timetable__text" set:html={pl.timetable.second} />
+          </div>
+          <div class="importants">
+            <h2 class="importants__title">{pl.important.title}</h2>
+            <ul class="importants__phones">
+              {
+                pl.important.telephones.map((num) => {
+                  return <li class="importants__phone">{num}</li>;
+                })
+              }
+            </ul>
+          </div>
+        </div>
         <div class="location">
           <h2 class="location__title">Nasza lokalizacja!</h2>
           <div class="location__container">
@@ -44,23 +61,6 @@ const title = pl.meta.title;
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-        <div class="time-important">
-          <div class="timetable">
-            <h2 class="timetable__title">{pl.timetable.title}</h2>
-            <p class="timetable__text" set:html={pl.timetable.first} />
-            <p class="timetable__text" set:html={pl.timetable.second} />
-          </div>
-          <div class="importants">
-            <h2 class="importants__title">{pl.important.title}</h2>
-            <ul class="importants__phones">
-              {
-                pl.important.telephones.map((num) => {
-                  return <li class="importants__phone">{num}</li>;
-                })
-              }
-            </ul>
           </div>
         </div>
         <div class="details">
