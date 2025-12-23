@@ -19,7 +19,8 @@ const title = gr.meta.title;
         </div>
         <p class="opening__wedding-type">{gr.heading.type}</p>
         <h2 class="opening__announcement" set:html={gr.heading.announcement} />
-        <img src="/wedding-gosia-geo/guinea-pigs.jpg" alt="" />
+        <video src="/wedding-gosia-geo/wedding_video.mov" controls muted
+        ></video>
       </section>
       <section>
         <div class="invitation">
@@ -70,7 +71,6 @@ const title = gr.meta.title;
         <div class="details">
           <p set:html={gr.confirmation} />
           <p set:html={gr.accomodation} />
-          <p set:html={gr.food} />
           <div class="details__presents">
             <p>{gr.presents}</p>
             <div class="details__icons">
