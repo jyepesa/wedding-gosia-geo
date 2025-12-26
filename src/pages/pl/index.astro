@@ -5,6 +5,7 @@ import { pl } from "../../i18n/pl";
 import LangButton from "../../components/lang-button.astro";
 
 const title = pl.meta.title;
+
 ---
 
 <Layout title={title} language="pl">
@@ -19,7 +20,16 @@ const title = pl.meta.title;
         </div>
         <p class="opening__wedding-type">{pl.heading.type}</p>
         <h2 class="opening__announcement" set:html={pl.heading.announcement} />
-        <video src="/wedding-gosia-geo/wedding_video.mov" controls muted autoplay></video>
+        <audio
+          src="/wedding-gosia-geo/with-you_Everet-Almond.mp3"
+          id="audio-clip"></audio>
+        <video
+          id="video-clip"
+          src="/wedding-gosia-geo/wedding_video.mov"
+          controls
+          muted
+          loop
+          playsinline></video>
       </section>
       <section>
         <div class="invitation">
@@ -84,3 +94,17 @@ const title = pl.meta.title;
     </main>
   </div>
 </Layout>
+<script>
+  const audio = document.getElementById("audio-clip") as HTMLAudioElement;
+  const video = document.getElementById("video-clip") as HTMLVideoElement;
+  const playAudioClip = () => {
+    if (!video.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  };
+
+  video.addEventListener("play", playAudioClip);
+  video.addEventListener("pause", playAudioClip);
+</script>

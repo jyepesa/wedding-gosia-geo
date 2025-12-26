@@ -1,5 +1,5 @@
 ---
-//DGreek
+//Greek
 import Layout from "../../layouts/Layout.astro";
 import { gr } from "../../i18n/gr";
 import LangButton from "../../components/lang-button.astro";
@@ -19,11 +19,16 @@ const title = gr.meta.title;
         </div>
         <p class="opening__wedding-type">{gr.heading.type}</p>
         <h2 class="opening__announcement" set:html={gr.heading.announcement} />
+        <audio
+          src="/wedding-gosia-geo/with-you_Everet-Almond.mp3"
+          id="audio-clip"></audio>
         <video
+          id="video-clip"
           src="/wedding-gosia-geo/wedding_video.mov"
           controls
           muted
-          autoplay></video>
+          loop
+          playsinline></video>
       </section>
       <section>
         <div class="invitation">
@@ -92,6 +97,19 @@ const title = gr.meta.title;
     </main>
   </div>
 </Layout>
+<script>
+  const audio = document.getElementById("audio-clip") as HTMLAudioElement;
+  const video = document.getElementById("video-clip") as HTMLVideoElement;
+  const playAudioClip = () => {
+    if (!video.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  };
+  video.addEventListener("play", playAudioClip);
+  video.addEventListener("pause", playAudioClip);
+</script>
 <style lang="scss">
   .opening {
     @media screen and (min-width: 800px) {
