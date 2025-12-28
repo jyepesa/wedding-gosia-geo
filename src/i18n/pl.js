@@ -1,7 +1,7 @@
 export const pl = {
   meta: {
     lang: "pl",
-    title: "Ślub Gosi!",
+    title: "Ślub Gosi i Geo",
   },
   heading: {
     title: "Gazeta Ślubna",
